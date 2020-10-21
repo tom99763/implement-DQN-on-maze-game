@@ -34,5 +34,6 @@ class Simple_Net(nn.Module):
 
     def forward(self, x):
         x = self.fc1(x)
+        x=F.relu(x)
         Q = self.out(x)
         return Q
